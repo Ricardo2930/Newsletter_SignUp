@@ -14,10 +14,14 @@ submitEmail.addEventListener('click', (e) => {
         container.classList.add('container-modal')
         modal.classList.add('modal-content')
 
-        const modalEmail = document.createElement('span');
-        modalEmail.classList.add('modal-p')
-        modalEmail.innerHTML = `A confirmation email has been sent to ${valueInput}. Please open it  and click this button inside to confirm your subscription`
-        modal.appendChild(modalEmail)
+        modal.innerHTML = 
+        `
+        <img src="./assets/images/icon-success.svg" class="modal-image" alt="">
+        <h2 class="modal-title">Thanks for subscribing!</h2>
+        <h5 class="modal-p">
+        A confirmation email has been sent to <span class="span-modal">${valueInput}</span>. Please open it  and click this button inside to confirm your subscription
+        </h5>
+        `
 
         const submitEmailMessage = document.createElement('input');
         submitEmailMessage.classList.add("modal-submit")
