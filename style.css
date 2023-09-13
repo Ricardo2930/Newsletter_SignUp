@@ -1,0 +1,217 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: hsl(235, 18%, 26%);
+  color: hsl(235, 18%, 26%);
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  display: flex;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 2rem;
+  width: 900px;
+}
+
+.container-modal {
+  display: none;
+}
+
+.content {
+  padding: 1.5rem;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0rem 1.5rem;
+}
+
+h1 {
+  font-size: 3.4rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+h4 {
+  font-weight: 400;
+}
+
+.list-form {
+  padding: 0rem 1rem;
+}
+
+.list,
+.list-one,
+.list-two {
+  display: flex;
+  padding: 0.5rem;
+}
+
+p {
+  margin-left: 1rem;
+}
+
+.form-control-email {
+  display: grid;
+  padding: 2rem 1rem 1rem 1.5rem;
+}
+
+.label {
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.error-email {
+  display: none;
+}
+
+.error-email-message {
+  display: block;
+  color: hsl(4, 100%, 67%);
+}
+
+.input-email {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: hsl(231, 7%, 60%) solid 0.5px;
+  margin-bottom: 1rem;
+}
+
+.input-email-error {
+  background-color: hsl(4, 100%, 95%);
+  border: hsl(4, 100%, 67%) solid 0.5px;
+  color: hsl(4, 100%, 67%);
+}
+
+.input-email::placeholder {
+  color: hsl(231, 7%, 60%);
+}
+
+.submit-email {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  background-color: hsl(235, 18%, 26%);
+  color: hsl(0, 0%, 100%);
+  cursor: pointer;
+}
+
+.submit-email:hover {
+  background-color: hsl(4, 100%, 67%);
+  border: hsl(4, 100%, 67%) solid 0.5px;
+  box-shadow: hsl(4, 100%, 67%) 5px 5px 20px;
+}
+
+.image-form-control {
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  margin: 1rem;
+  background-image: url("./assets/images/illustration-sign-up-desktop.svg");
+  height: 593px;
+  width: 458px;
+  border-radius: 1rem;
+}
+
+/*----MODAL----*/
+.modal {
+  display: none;
+}
+
+.modal-content {
+  display: block;
+  display: grid;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 2rem;
+  width: 440px;
+  padding: 2.5rem 3.5rem;
+  gap: 2rem;
+}
+
+.modal-image {
+  height: 3.5rem;
+}
+
+.modal-title {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.modal-p {
+  font-weight: 400;
+  font-size: 15px;
+}
+
+.modal-submit {
+  background-color: hsl(235, 18%, 26%);
+  color: hsl(0, 0%, 100%);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.modal-submit:hover {
+  background-color: hsl(4, 100%, 67%);
+  border: hsl(4, 100%, 67%) solid 0.5px;
+  box-shadow: hsl(4, 100%, 67%) 5px 5px 20px;
+}
+
+@media screen and (max-width: 555px) {
+  .container {
+    display: flex;
+    flex-direction: column-reverse;
+    height: 1000px;
+  }
+
+  .container-modal {
+    display: none;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .form-control-email {
+    display: grid;
+    padding: 2rem 1.5rem 3rem 1.5rem;
+  }
+
+  .image-form-control {
+    background-image: url("./assets/images/illustration-sign-up-mobile.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 315px;
+    width: 375px;
+  }
+
+  .modal-content {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 0rem;
+    height: 665px;
+    padding: 5rem 2rem;
+    gap: 0rem;
+  }
+
+  .modal-submit {
+    margin-top: 7rem;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+}
